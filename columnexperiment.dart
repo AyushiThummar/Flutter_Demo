@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+class Columnexperiment extends StatelessWidget {
+  const Columnexperiment({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: Colors.white,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Hello World!",
+              style: TextStyle(fontSize: 24, color: Colors.black),
+            ),
+            SizedBox(height: 20),
+            Text(
+              "Welcome to Flutter Column Experiment.",
+              style: TextStyle(
+                fontSize: 18,
+                color: const Color.fromARGB(255, 14, 81, 195),
+              ),
+            ),
+            SizedBox(height: 20),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Expanded(
+                  child: ElevatedButton(onPressed: null, child: Text("B1")),
+                ),
+                SizedBox(width: 5),
+                Expanded(
+                  child: ElevatedButton(onPressed: null, child: Text("B1")),
+                ),
+
+                SizedBox(width: 5),
+                Expanded(
+                  child: ElevatedButton(onPressed: null, child: Text("B1")),
+                ),
+                SizedBox(width: 5),
+                Expanded(
+                  child: ElevatedButton(onPressed: null, child: Text("B1")),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
